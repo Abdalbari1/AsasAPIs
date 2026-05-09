@@ -1,5 +1,6 @@
 using Asas.Data;
 using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -17,6 +18,8 @@ builder.Services.AddCors(options => {
          .AllowAnyHeader();
     });
 });
+// init Hash password 
+builder.Services.AddScoped<Asas.AsasHash.Asas.Contracts.IAsasHashPassword, Asas.AsasHash.AsasHash>();
 
 var app = builder.Build();
 

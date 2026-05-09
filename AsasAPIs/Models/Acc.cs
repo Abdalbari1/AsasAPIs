@@ -11,8 +11,10 @@ public partial class Acc
     public int ComId { get; set; }
 
     public string EmpId { get; set; } = null!;
-
+    [Required(ErrorMessage = "البريد الإلكتروني مطلوب")]
+    [EmailAddress(ErrorMessage = "صيغة البريد غير صحيحة")]
     public string Email { get; set; } = null!;
+    [Required(ErrorMessage = "كلمة المرور مطلوبة")]
     public string Pass { get; set; } = null!; 
      public byte[] IV { get; set; } = null!; // Use for Decryption Pass 
 
