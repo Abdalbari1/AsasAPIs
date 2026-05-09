@@ -1,4 +1,5 @@
-﻿namespace Asas.AsasHash.Asas.Models
+﻿using Asas.AsasHash.Asas.Models;
+namespace Asas.AsasHash.Asas.Models
 {
     public class Hash
     {
@@ -11,5 +12,7 @@
 
         // Indicates the success status of the hashing or verification process.
         public bool IsSucceeded { get; set; } = false;
+
+        public GoodHash GoodHash { get; set; }
     }
 }

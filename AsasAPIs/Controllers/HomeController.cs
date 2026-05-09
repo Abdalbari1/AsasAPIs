@@ -17,6 +17,7 @@ namespace AsasAPIs.Controllers
     public class HomeController : ControllerBase
     {
         private readonly AsasContext _context;
+
         public HomeController(AsasContext context)
         {
             _context = context;
@@ -25,17 +26,21 @@ namespace AsasAPIs.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] string Name, string Email, string Mass)
         {
-            if (ModelState.IsValid)
+      
+            if (!ModelState.IsValid)
             {
-                Issue issue = new Issue();
-                issue.Name = Name;
-                issue.Email = Email;
-                issue.Mass = Mass;
-                _context.Issue.Add(issue);
-                await _context.SaveChangesAsync();
-                return Ok(200);
+                return BadRequest(ModelState);
+           
             }
-            else return BadRequest(400);
+
+            Issue issue = new Issue();
+            issue.Name = Name;
+            issue.Email = Email;
+            issue.Mass = Mass;
+            _context.Issue.Add(issue);
+            await _context.SaveChangesAsync();
+            return Ok(200);
+
         }
     }
 }
