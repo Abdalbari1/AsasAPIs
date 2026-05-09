@@ -14,6 +14,8 @@ public partial class Acc
 
     public string Email { get; set; } = null!;
     public string Pass { get; set; } = null!; 
+     public byte[] IV { get; set; } = null!; // Use for Decryption Pass 
+
 
     public string? PhoneN { get; set; }
 
