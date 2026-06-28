@@ -1,4 +1,4 @@
-using Asas.Data;
+using AsasAPIs.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

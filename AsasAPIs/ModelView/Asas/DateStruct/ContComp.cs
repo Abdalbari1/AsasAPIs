@@ -1,11 +1,11 @@
-﻿namespace Asas.ModelView.Asas.DateStruct
-{
+﻿//namespace Asas.ModelView.Asas.DateStruct
+//{
 
-    public class ContComp
-    {
-        public int Cont { get; set; }
+//    public class ContComp
+//    {
+//        public int Cont { get; set; }
 
-        public int ContActive { get; set; }
+//        public int ContActive { get; set; }
 
-    }
-}
+//    }
+//}
