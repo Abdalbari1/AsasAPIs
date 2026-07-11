@@ -4,7 +4,7 @@ using AsasAPIs.Data;
 using AsasAPIs.Models;
 using Microsoft.EntityFrameworkCore;
 using AsasAPIs.DTOs;
-using Asas.AsasHash.Asas.Models;
+using Asas.AsasHash.Models;
 
 using Asas.AsasHash;
 namespace AsasAPIs.Controllers

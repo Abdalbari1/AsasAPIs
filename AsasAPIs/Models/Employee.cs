@@ -5,10 +5,15 @@ namespace AsasAPIs.Models;
 
 public partial class Employee
 {
+    // This is the primary key for the Employee table
     public int EmployeeId { get; set; }
 
+
+    // This is the foreign key for the Company table
     public int ComId { get; set; }
 
+
+    // This is the foreign key for the AddEmp table
     public int EmpAutoId { get; set; }
 
     public string Name { get; set; } = null!;

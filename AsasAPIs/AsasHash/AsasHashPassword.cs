@@ -1,7 +1,7 @@
 ﻿using System;
-using Asas.AsasHash.Asas.Contracts;
+using Asas.AsasHash.Contracts;
 using BCrypt.Net;
-using Asas.AsasHash.Asas.Models;
+using Asas.AsasHash.Models;
 
 namespace Asas.AsasHash
 {

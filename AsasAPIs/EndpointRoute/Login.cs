@@ -1,7 +1,7 @@
 ﻿using Asas.AsasHash.Contracts;
 using Asas.AsasHash.Models;
-using Asas.Data;
-using Asas.Models;
+using AsasAPIs.Models;
+using AsasAPIs.Data;
 using Azure.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -25,7 +25,7 @@ namespace AsasAPIs.EndpointRoute
                 )// lambda parameters
               =>
             {
-                var compAcc = await dbContext.Acc.FirstOrDefaultAsync(a => a.Email == request.Email);
+                var compAcc = await dbContext.Employees.FirstOrDefaultAsync(a => a.Email == request.Email);
                 if (compAcc == null)
                 {
                     return Results.BadRequest(new { Message = "البريد الإلكتروني أو كلمة المرور غير صحيحة" });

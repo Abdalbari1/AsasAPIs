@@ -1,5 +1,5 @@
-﻿using Asas.AsasHash.Asas.Contracts;
-using Asas.AsasHash.Asas.Models;
+﻿using Asas.AsasHash.Contracts;
+using Asas.AsasHash.Models;
 using System;
 using System.IO;
 using System.Security.Cryptography;

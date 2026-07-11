@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AsasAPIs.Global_Query_Filter;
 using AsasAPIs.Models;
 using Microsoft.EntityFrameworkCore;
 namespace AsasAPIs.Data;
@@ -9,28 +10,28 @@ public partial class AsasContext : DbContext
     public AsasContext()
     {
     }
-
+    private readonly int _currentComId;
     public AsasContext(DbContextOptions<AsasContext> options, ICompanyService companyService)
             : base(options)
     {
         _currentComId = companyService.GetCurrentCompanyId();
     }
 
-    public virtual DbSet<AddEmp> AddEmps { get; set; }
+    public virtual DbSet<AddEmp> AddEmp { get; set; }
 
-    public virtual DbSet<Company> Companies { get; set; }
+    public virtual DbSet<Company> Company { get; set; }
 
-    public virtual DbSet<Department> Departments { get; set; }
+    public virtual DbSet<Department> Department { get; set; }
 
-    public virtual DbSet<Employee> Employees { get; set; }
+    public virtual DbSet<Employee> Employee { get; set; }
 
-    public virtual DbSet<InternalMessage> InternalMessages { get; set; }
+    public virtual DbSet<InternalMessage> InternalMessage { get; set; }
 
     public virtual DbSet<Issue> Issues { get; set; }
 
-    public virtual DbSet<MessageAttachment> MessageAttachments { get; set; }
+    public virtual DbSet<MessageAttachment> MessageAttachment { get; set; }
 
-    public virtual DbSet<MessageRecipient> MessageRecipients { get; set; }
+    public virtual DbSet<MessageRecipient> MessageRecipient { get; set; }
 
     public virtual DbSet<Models.Task> Tasks { get; set; }
 

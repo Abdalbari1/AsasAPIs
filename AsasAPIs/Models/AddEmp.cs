@@ -5,13 +5,18 @@ namespace AsasAPIs.Models;
 
 public partial class AddEmp
 {
+    // This is the primary key for the AddEmp table, which is an auto-incrementing integer.
     public int EmpAutoId { get; set; }
 
+    // This is a foreign key that references the ComId in the Company table.
     public int ComId { get; set; }
 
+   
     public string EmpId { get; set; } = null!;
 
     public decimal Role { get; set; }
+
+    // This is a foreign key that references the DepAutoId in the Department table.
 
     public int DepAutoId { get; set; }
 
